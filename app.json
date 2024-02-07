@@ -1,4 +1,7 @@
 {
   "name": "MiAppReactNative",
-  "displayName": "MiAppReactNative"
+  "displayName": "MiAppReactNative",
+  "plugins": [
+    "expo-font"
+  ]
 }
