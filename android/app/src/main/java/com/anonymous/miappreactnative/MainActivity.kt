@@ -1,4 +1,4 @@
-package com.miappreactnative
+package com.anonymous.miappreactnative
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
