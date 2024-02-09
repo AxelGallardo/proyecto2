@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Switch } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { View, Text, StyleSheet, TouchableOpacity, Switch, Image } from 'react-native';
 
 const Header = () => {
     const [isEnabled, setIsEnabled] = useState(false);
@@ -20,20 +19,21 @@ const Header = () => {
                 <Text style={styles.headerText}>OlimpoChat</Text>
             </View>
             <View style={styles.switchContainer}>
-                <TouchableOpacity onPress={toggleSwitch} style={styles.switchButton}>
-                    <Text style={styles.switchText}>{isEnabled ? 'Visible' : 'Oculto'}</Text>
-                </TouchableOpacity>
                 <Switch
+                    style={{ transform: [{ scaleX: 1 }, { scaleY: 1 }] }} // Aumenta el tamaño del Switch
                     trackColor={{ false: '#767577', true: '#FF00FF' }}
                     thumbColor={isEnabled ? 'white' : '#f4f3f4'}
                     ios_backgroundColor="#3e3e3e"
                     onValueChange={toggleSwitch}
                     value={isEnabled}
                 />
+                <TouchableOpacity onPress={toggleSwitch} style={styles.switchButton}>
+                    <Text style={styles.switchText}>{isEnabled ? 'Visible' : 'Oculto'}</Text>
+                </TouchableOpacity>
             </View>
 
             <TouchableOpacity onPress={handleSettingsPress} style={styles.settingsButton}>
-                <Icon name="settings" size={24} color="white" />
+                <Image source={require('../images/engranaje.png')} style={styles.settingsIcon} />
             </TouchableOpacity>
         </View>
     );
@@ -48,22 +48,23 @@ const styles = StyleSheet.create({
         paddingVertical: 20, // Modificado para mayor espacio
         paddingHorizontal: 15, // Modificado para mayor espacio
     },
-    switchContainer: {
-        flexDirection: 'row',
-        alignItems: 'center',
-    },
-    switchButton: {
-        paddingHorizontal: 10, // Añadido para espaciar el botón del switch
-    },
-    switchText: {
-        color: 'white',
-        marginRight: 5,
-        fontSize: 16, // Ajustado el tamaño de fuente
-    },
     olimpoContainer: {
         flex: 1, // Modificado para ocupar espacio restante
         alignItems: 'flex-start', // Alineado hacia la izquierda
         justifyContent: 'flex-start', // Alineado hacia la izquierda
+        marginLeft: 15, // Ajuste del margen izquierdo
+    },
+    switchContainer: {
+        flexDirection: 'column', // Cambiado a columna para apilar los elementos verticalmente
+        alignItems: 'center',
+    },
+    switchButton: {
+        paddingHorizontal: 25, // Añadido para espaciar el botón del switch
+    },
+    switchText: {
+        color: 'white',
+        marginTop: 0, // Agregado margen arriba para separar el texto del switch
+        fontSize: 12, // Ajustado el tamaño de fuente
     },
     headerText: {
         color: 'white',
@@ -73,6 +74,11 @@ const styles = StyleSheet.create({
     },
     settingsButton: {
         padding: 10,
+    },
+    settingsIcon: {
+        width: 24,
+        height: 24,
+        tintColor: 'white',
     },
 });
 
