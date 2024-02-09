@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     headerText: {
         color: 'white',
 
-        fontSize: 22,
+        fontSize: 20,
         textAlign: 'center',
         fontWeight: 'bold',
     },
