@@ -16,25 +16,28 @@ const Header = () => {
 
     return (
         <View style={styles.header}>
+
+            <View style={styles.olimpoContainer}>
+                <Text style={styles.headerText}>OlimpoChat</Text>
+            </View>
             <View style={styles.switchContainer}>
-                <TouchableOpacity onPress={toggleSwitch}>
-                    <Text style={styles.switchText}>Visible</Text>
+                <TouchableOpacity onPress={toggleSwitch} style={styles.switchButton}>
+                    <Text style={styles.switchText}>{isEnabled ? 'Visible' : 'Oculto'}</Text>
                 </TouchableOpacity>
                 <Switch
-                    trackColor={{ false: '#767577', true: '#81b0ff' }}
-                    thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
+                    trackColor={{ false: '#767577', true: '#FF00FF' }}
+                    thumbColor={isEnabled ? 'white' : '#f4f3f4'}
+
                     ios_backgroundColor="#3e3e3e"
                     onValueChange={toggleSwitch}
                     value={isEnabled}
                 />
             </View>
-            <View style={styles.centerContainer}>
-                <Text style={styles.headerText}>Olimpochat</Text>
-            </View>
+
+
             <TouchableOpacity onPress={handleSettingsPress} style={styles.settingsButton}>
-                <View style={styles.circle}>
-                    <View style={styles.innerCircle} />
-                </View>
+                <Icon name="settings" size={24} color="white" />
+
             </TouchableOpacity>
         </View>
     );
@@ -44,44 +47,39 @@ const styles = StyleSheet.create({
     header: {
         flexDirection: 'row',
         justifyContent: 'space-between',
+
         alignItems: 'center',
-        backgroundColor: 'rgba(0, 0, 0, 0.2)',
-        padding: 20,
+        backgroundColor: 'transparent', // Cambiado el color de fondo
+        paddingVertical: 20, // Modificado para mayor espacio
+        paddingHorizontal: 15, // Modificado para mayor espacio
     },
     switchContainer: {
         flexDirection: 'row',
         alignItems: 'center',
-        flex: 1,
+    },
+    switchButton: {
+        paddingHorizontal: 10, // Añadido para espaciar el botón del switch
     },
     switchText: {
         color: 'white',
         marginRight: 5,
+        fontSize: 16, // Ajustado el tamaño de fuente
     },
-    centerContainer: {
-        flex: 4, // Ocupa aproximadamente 4/5 del espacio restante
-        alignItems: 'center',
+    olimpoContainer: {
+        flex: 1, // Modificado para ocupar espacio restante
+        alignItems: 'flex-start', // Alineado hacia la izquierda
+        justifyContent: 'flex-start', // Alineado hacia la izquierda
     },
     headerText: {
         color: 'white',
-        fontSize: 24,
+
+        fontSize: 22,
         textAlign: 'center',
+        fontWeight: 'bold',
     },
     settingsButton: {
         padding: 10,
-    },
-    circle: {
-        width: 24,
-        height: 24,
-        borderRadius: 12,
-        backgroundColor: 'white',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    innerCircle: {
-        width: 16,
-        height: 16,
-        borderRadius: 8,
-        backgroundColor: '#767577',
+
     },
 });
 

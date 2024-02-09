@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
     },
     chatText: {
         fontSize: 20,
+        color: 'white',
     },
 });
 
