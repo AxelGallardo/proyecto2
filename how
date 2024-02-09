@@ -1,0 +1,188 @@
+[33mcommit 5f6d4bd31bbe83355540fc6db1d18d492c237fbe[m[33m ([m[1;36mHEAD[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: Axel <axel.gallardo.e@gmail.com>
+Date:   Wed Feb 7 02:40:33 2024 -0500
+
+    switch, logo, config, fondo morado
+
+[1mdiff --git a/.expo/devices.json b/.expo/devices.json[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5efff6c[m
+[1m--- /dev/null[m
+[1m+++ b/.expo/devices.json[m
+[36m@@ -0,0 +1,3 @@[m
+[32m+[m[32m{[m
+[32m+[m[32m  "devices": [][m
+[32m+[m[32m}[m
+[1mdiff --git a/.expo/metro/externals/assert/index.js b/.expo/metro/externals/assert/index.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8bf6677[m
+[1m--- /dev/null[m
+[1m+++ b/.expo/metro/externals/assert/index.js[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mmodule.exports = $$require_external('node:assert');[m
+\ No newline at end of file[m
+[1mdiff --git a/.expo/metro/externals/async_hooks/index.js b/.expo/metro/externals/async_hooks/index.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..388698c[m
+[1m--- /dev/null[m
+[1m+++ b/.expo/metro/externals/async_hooks/index.js[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mmodule.exports = $$require_external('node:async_hooks');[m
+\ No newline at end of file[m
+[1mdiff --git a/.expo/metro/externals/buffer/index.js b/.expo/metro/externals/buffer/index.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..25efd16[m
+[1m--- /dev/null[m
+[1m+++ b/.expo/metro/externals/buffer/index.js[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mmodule.exports = $$require_external('node:buffer');[m
+\ No newline at end of file[m
+[1mdiff --git a/.expo/metro/externals/child_process/index.js b/.expo/metro/externals/child_process/index.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ed59903[m
+[1m--- /dev/null[m
+[1m+++ b/.expo/metro/externals/child_process/index.js[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mmodule.exports = $$require_external('node:child_process');[m
+\ No newline at end of file[m
+[1mdiff --git a/.expo/metro/externals/cluster/index.js b/.expo/metro/externals/cluster/index.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b0a5730[m
+[1m--- /dev/null[m
+[1m+++ b/.expo/metro/externals/cluster/index.js[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mmodule.exports = $$require_external('node:cluster');[m
+\ No newline at end of file[m
+[1mdiff --git a/.expo/metro/externals/console/index.js b/.expo/metro/externals/console/index.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b41f477[m
+[1m--- /dev/null[m
+[1m+++ b/.expo/metro/externals/console/index.js[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mmodule.exports = $$require_external('node:console');[m
+\ No newline at end of file[m
+[1mdiff --git a/.expo/metro/externals/constants/index.js b/.expo/metro/externals/constants/index.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..08cbbcb[m
+[1m--- /dev/null[m
+[1m+++ b/.expo/metro/externals/constants/index.js[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mmodule.exports = $$require_external('node:constants');[m
+\ No newline at end of file[m
+[1mdiff --git a/.expo/metro/externals/crypto/index.js b/.expo/metro/externals/crypto/index.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..73dff11[m
+[1m--- /dev/null[m
+[1m+++ b/.expo/metro/externals/crypto/index.js[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mmodule.exports = $$require_external('node:crypto');[m
+\ No newline at end of file[m
+[1mdiff --git a/.expo/metro/externals/dgram/index.js b/.expo/metro/externals/dgram/index.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..cf84d36[m
+[1m--- /dev/null[m
+[1m+++ b/.expo/metro/externals/dgram/index.js[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mmodule.exports = $$require_external('node:dgram');[m
+\ No newline at end of file[m
+[1mdiff --git a/.expo/metro/externals/diagnostics_channel/index.js b/.expo/metro/externals/diagnostics_channel/index.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ba4a328[m
+[1m--- /dev/null[m
+[1m+++ b/.expo/metro/externals/diagnostics_channel/index.js[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mmodule.exports = $$require_external('node:diagnostics_channel');[m
+\ No newline at end of file[m
+[1mdiff --git a/.expo/metro/externals/dns/index.js b/.expo/metro/externals/dns/index.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f20fc69[m
+[1m--- /dev/null[m
+[1m+++ b/.expo/metro/externals/dns/index.js[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mmodule.exports = $$require_external('node:dns');[m
+\ No newline at end of file[m
+[1mdiff --git a/.expo/metro/externals/domain/index.js b/.expo/metro/externals/domain/index.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..06411d6[m
+[1m--- /dev/null[m
+[1m+++ b/.expo/metro/externals/domain/index.js[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mmodule.exports = $$require_external('node:domain');[m
+\ No newline at end of file[m
+[1mdiff --git a/.expo/metro/externals/events/index.js b/.expo/metro/externals/events/index.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8a74dd9[m
+[1m--- /dev/null[m
+[1m+++ b/.expo/metro/externals/events/index.js[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mmodule.exports = $$require_external('node:events');[m
+\ No newline at end of file[m
+[1mdiff --git a/.expo/metro/externals/fs/index.js b/.expo/metro/externals/fs/index.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..7f19634[m
+[1m--- /dev/null[m
+[1m+++ b/.expo/metro/externals/fs/index.js[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mmodule.exports = $$require_external('node:fs');[m
+\ No newline at end of file[m
+[1mdiff --git a/.expo/metro/externals/fs/promises/index.js b/.expo/metro/externals/fs/promises/index.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..c51c449[m
+[1m--- /dev/null[m
+[1m+++ b/.expo/metro/externals/fs/promises/index.js[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mmodule.exports = $$require_external('node:fs/promises');[m
+\ No newline at end of file[m
+[1mdiff --git a/.expo/metro/externals/http/index.js b/.expo/metro/externals/http/index.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5039eab[m
+[1m--- /dev/null[m
+[1m+++ b/.expo/metro/externals/http/index.js[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mmodule.exports = $$require_external('node:http');[m
+\ No newline at end of file[m
+[1mdiff --git a/.expo/metro/externals/http2/index.js b/.expo/metro/externals/http2/index.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..2caada9[m
+[1m--- /dev/null[m
+[1m+++ b/.expo/metro/externals/http2/index.js[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mmodule.exports = $$require_external('node:http2');[m
+\ No newline at end of file[m
+[1mdiff --git a/.expo/metro/externals/https/index.js b/.expo/metro/externals/https/index.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e0c59d4[m
+[1m--- /dev/null[m
+[1m+++ b/.expo/metro/externals/https/index.js[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mmodule.exports = $$require_external('node:https');[m
+\ No newline at end of file[m
+[1mdiff --git a/.expo/metro/externals/inspector/index.js b/.expo/metro/externals/inspector/index.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3db9227[m
+[1m--- /dev/null[m
+[1m+++ b/.expo/metro/externals/inspector/index.js[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mmodule.exports = $$require_external('node:inspector');[m
+\ No newline at end of file[m
+[1mdiff --git a/.expo/metro/externals/module/index.js b/.expo/metro/externals/module/index.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..fa4f3b5[m
+[1m--- /dev/null[m
+[1m+++ b/.expo/metro/externals/module/index.js[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mmodule.exports = $$require_external('node:module');[m
+\ No newline at end of file[m
+[1mdiff --git a/.expo/metro/externals/net/index.js b/.expo/metro/externals/net/index.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..554ab85[m
+[1m--- /dev/null[m
+[1m+++ b/.expo/metro/externals/net/index.js[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mmodule.exports = $$require_external('node:net');[m
+\ No newline at end of file[m
+[1mdiff --git a/.expo/metro/externals/os/index.js b/.expo/metro/externals/os/index.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ffa5a30[m
+[1m--- /dev/null[m
+[1m+++ b/.expo/metr
