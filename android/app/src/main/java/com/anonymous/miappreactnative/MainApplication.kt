@@ -1,4 +1,4 @@
-package com.miappreactnative
+package com.anonymous.miappreactnative
 
 import android.app.Application
 import com.facebook.react.PackageList

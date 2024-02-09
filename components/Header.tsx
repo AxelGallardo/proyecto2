@@ -15,6 +15,7 @@ const Header = () => {
 
     return (
         <View style={styles.header}>
+
             <View style={styles.olimpoContainer}>
                 <Text style={styles.headerText}>OlimpoChat</Text>
             </View>
@@ -23,6 +24,7 @@ const Header = () => {
                     style={{ transform: [{ scaleX: 1 }, { scaleY: 1 }] }} // Aumenta el tamaño del Switch
                     trackColor={{ false: '#767577', true: '#FF00FF' }}
                     thumbColor={isEnabled ? 'white' : '#f4f3f4'}
+
                     ios_backgroundColor="#3e3e3e"
                     onValueChange={toggleSwitch}
                     value={isEnabled}
@@ -31,6 +33,7 @@ const Header = () => {
                     <Text style={styles.switchText}>{isEnabled ? 'Visible' : 'Oculto'}</Text>
                 </TouchableOpacity>
             </View>
+
 
             <TouchableOpacity onPress={handleSettingsPress} style={styles.settingsButton}>
                 <Image source={require('../images/engranaje.png')} style={styles.settingsIcon} />
@@ -43,6 +46,7 @@ const styles = StyleSheet.create({
     header: {
         flexDirection: 'row',
         justifyContent: 'space-between',
+
         alignItems: 'center',
         backgroundColor: 'transparent', // Cambiado el color de fondo
         paddingVertical: 20, // Modificado para mayor espacio
@@ -68,6 +72,7 @@ const styles = StyleSheet.create({
     },
     headerText: {
         color: 'white',
+
         fontSize: 22,
         textAlign: 'center',
         fontWeight: 'bold',

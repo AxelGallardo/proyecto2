@@ -3,5 +3,8 @@
   "displayName": "MiAppReactNative",
   "plugins": [
     "expo-font"
-  ]
+  ],
+  "android": {
+    "package": "com.anonymous.miappreactnative"
+  }
 }
