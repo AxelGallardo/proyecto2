@@ -13,7 +13,9 @@ import Icon from 'react-native-vector-icons/MaterialIcons'; // Importa iconos de
 const App = () => {
   return (
     <LinearGradient
+
       colors={['#540095', '#9B01CF', '#4B0082']} // Tonos de fucsia y morado
+
       style={styles.container}>
       {/* Contenido de tu aplicación */}
       <View style={styles.container}>
